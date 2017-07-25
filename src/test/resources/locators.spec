@@ -1,0 +1,15 @@
+#elementname                      %locator_type                    %locator_value
+basic_course                      %xpath                           %//a[contains(text(),'Basic')]
+advance_course                    %xpath                           %//a[contains(text(),'Advance')]
+green_box                         %xpath                           %//div[contains(@class,'green')]
+box                               %xpath                           %//div[contains(@id,'ans')]
+repaint                           %xpath                           %//a[contains(@onclick,'reload')]
+proceed                           %xpath                           %//a[contains(@onclick,'go')]
+drag_box                          %xpath                           %//div[@id='dragbox']
+drop_box                          %xpath                           %//div[@id='dropbox']
+launchWindow                      %xpath                           %//a[contains(@onclick,'launch')]
+text_Box                          %xpath                           %//input[@id='name']
+submit_button                     %xpath                           %//input[@id='submit']
+generate_Token                    %xpath                           %//a[contains(@onclick,'Token')]
+token                             %xpath                           %//span[@id='token']
+
