@@ -6,3 +6,8 @@ name                                     %xpath                           %//inp
 passkey                                  %xpath                           %//input[@id='passkey']
 proceed                                  %xpath                           %//input[@id='submit']
 symbol                                   %xpath                           %//div[@id='symboldisplay']
+session_id                               %xpath                           %//span[@id='session_id']
+proceed1                                 %xpath                           %//a[contains(@onclick,'go')]
+download                                 %xpath                           %//a[contains(@href,'download')]
+signature                                %xpath                           %//input[@id='signature']
+proceed2                                 %xpath                           %//input[@value='Proceed']

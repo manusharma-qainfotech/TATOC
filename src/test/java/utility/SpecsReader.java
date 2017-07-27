@@ -59,4 +59,30 @@ public class SpecsReader {
 			return By.xpath(loc.locatorValue);
 
 	}
+	public String getJavaScriptQuery(String elementName)
+	{
+		locators loc = null;
+		String query ="";
+		Iterator<locators> itr = listcred.iterator();
+		int flag = 0;
+		while (itr.hasNext()) {
+			loc = itr.next();
+			String a = elementName;
+			String b = loc.element;
+			if (a.equalsIgnoreCase(b)) {
+				break;
+			}
+		}
+		WebElement element;
+		String type = loc.locatorType;
+		if (type.equals("css")) 
+		{
+			query = "return document.evaluate( \""+loc.locatorValue+"\" ,document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;";
+			return query;			
+		}
+		 else 
+		 {  query = "return document.evaluate( \""+loc.locatorValue+"\" ,document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;";
+			return query;
+		 }
+	}
 }

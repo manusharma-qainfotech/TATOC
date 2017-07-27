@@ -1,6 +1,7 @@
 package ActionPackage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -9,25 +10,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.JavascriptExecutor;
+
 import utility.SpecsReader;
 
 public class TatocMain {
 	WebDriver driver;
-	SpecsReader locReader;
+	public SpecsReader locReader;
 
 	public TatocMain() throws IOException {
 		locReader = new SpecsReader("locators");
 	}
-public static void main(String...s) throws IOException
-{
-TatocMain main = new TatocMain();
-main.launchUrl();
-main.clickOnGreenBox();
-main.Frame_Dungeon();
-main.dragAround();
-main.popupWindow();
-main.setCookies();
-}
+
 	public WebDriver launchUrl() {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\\\\\\\Users\\\\manusharma\\\\Downloads\\\\chromedriver_win32\\\\chromedriver.exe");
@@ -38,12 +32,8 @@ main.setCookies();
 		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 		return driver;
 	}
-
 	public void clickOnGreenBox() {
-
-		driver.findElement(locReader.getWebElement("basic_course")).click();
-        Reporter.log("click on basic_course");
-		driver.findElement(locReader.getWebElement("green_box")).click();
+	driver.findElement(locReader.getWebElement("green_box")).click();
         Reporter.log("click on green box icon");
 	}
 
@@ -84,9 +74,8 @@ main.setCookies();
 		String parentWindow = driver.getWindowHandle();
 		driver.findElement(locReader.getWebElement("launchWindow")).click();
 		Reporter.log("click on launch window");
-		for (String childWindow : driver.getWindowHandles()) {
-			driver.switchTo().window(childWindow);
-		}
+		ArrayList<String> list = new ArrayList<String>(driver.getWindowHandles());
+    	driver.switchTo().window(list.get(1));
 		Reporter.log("driver switch to child window");
 		driver.findElement(locReader.getWebElement("text_Box")).sendKeys("hii all");
 		Reporter.log("send keys to input text_box");

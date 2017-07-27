@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+    <line>
+      <![CDATA[navigate to url]]>
+    </line>
+    <line>
+      <![CDATA[click on advance button]]>
+    </line>
+    <line>
+      <![CDATA[Hover on menu option]]>
+    </line>
+    <line>
+      <![CDATA[click on go next option]]>
+    </line>
+    <line>
+      <![CDATA[database connection established]]>
+    </line>
+    <line>
+      <![CDATA[send keys to input name]]>
+    </line>
+    <line>
+      <![CDATA[send keys to input pass key]]>
+    </line>
+    <line>
+      <![CDATA[click on proceed button]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="23789" started-at="2017-07-27T07:21:04Z" finished-at="2017-07-27T07:21:28Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="23789" started-at="2017-07-27T07:21:04Z" finished-at="2017-07-27T07:21:28Z">
+      <class name="TestPackage.TatocTestAdvance">
+        <test-method status="PASS" signature="Beforeclass()[pri:0, instance:TestPackage.TatocTestAdvance@7cd62f43]" name="Beforeclass" is-config="true" duration-ms="6167" started-at="2017-07-27T12:51:04Z" finished-at="2017-07-27T12:51:10Z">
+          <reporter-output>
+            <line>
+              <![CDATA[navigate to url]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Beforeclass -->
+        <test-method status="PASS" signature="testHoverMenu()[pri:0, instance:TestPackage.TatocTestAdvance@7cd62f43]" name="testHoverMenu" duration-ms="2557" started-at="2017-07-27T12:51:10Z" finished-at="2017-07-27T12:51:13Z">
+          <reporter-output>
+            <line>
+              <![CDATA[click on advance button]]>
+            </line>
+            <line>
+              <![CDATA[Hover on menu option]]>
+            </line>
+            <line>
+              <![CDATA[click on go next option]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testHoverMenu -->
+        <test-method status="PASS" signature="testDatabaseQuery()[pri:1, instance:TestPackage.TatocTestAdvance@7cd62f43]" name="testDatabaseQuery" duration-ms="1038" started-at="2017-07-27T12:51:13Z" finished-at="2017-07-27T12:51:14Z">
+          <reporter-output>
+            <line>
+              <![CDATA[database connection established]]>
+            </line>
+            <line>
+              <![CDATA[send keys to input name]]>
+            </line>
+            <line>
+              <![CDATA[send keys to input pass key]]>
+            </line>
+            <line>
+              <![CDATA[click on proceed button]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testDatabaseQuery -->
+        <test-method status="PASS" signature="testOoyalaPlayerD()[pri:2, instance:TestPackage.TatocTestAdvance@7cd62f43]" name="testOoyalaPlayerD" duration-ms="118" started-at="2017-07-27T12:51:14Z" finished-at="2017-07-27T12:51:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOoyalaPlayerD -->
+        <test-method status="PASS" signature="testRestFulApi()[pri:3, instance:TestPackage.TatocTestAdvance@7cd62f43]" name="testRestFulApi" duration-ms="7401" started-at="2017-07-27T12:51:14Z" finished-at="2017-07-27T12:51:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRestFulApi -->
+        <test-method status="PASS" signature="testFileHandle()[pri:4, instance:TestPackage.TatocTestAdvance@7cd62f43]" name="testFileHandle" duration-ms="6478" started-at="2017-07-27T12:51:21Z" finished-at="2017-07-27T12:51:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFileHandle -->
+        <test-method status="PASS" signature="Afterclass()[pri:0, instance:TestPackage.TatocTestAdvance@7cd62f43]" name="Afterclass" is-config="true" duration-ms="0" started-at="2017-07-27T12:51:28Z" finished-at="2017-07-27T12:51:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Afterclass -->
+      </class> <!-- TestPackage.TatocTestAdvance -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
