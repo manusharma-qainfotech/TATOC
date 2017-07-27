@@ -95,23 +95,23 @@ public class TatocAdvance {
 		String[] data1 = data.split(": ");
 		String signature = RestAssured.when().get("http://10.0.1.86/tatoc/advanced/rest/service/token/" + data1[1])
 				.jsonPath().getString("token");
-		RestAssured.given().given().parameters("id",data1[1],"signature",signature,"allow_access",1).when().post("http://10.0.1.86/tatoc/advanced/rest/service/register").then().assertThat().statusCode(200);
+		RestAssured.given().given().parameters("id", data1[1], "signature", signature, "allow_access", 1).when()
+				.post("http://10.0.1.86/tatoc/advanced/rest/service/register").then().assertThat().statusCode(200);
 		driver.findElement(locReader.getWebElement("proceed1")).click();
 		Thread.sleep(3000);
 	}
-	public void FileHandle() throws InterruptedException, IOException
-	{
+
+	public void FileHandle() throws InterruptedException, IOException {
 		driver.findElement(locReader.getWebElement("download")).click();
 		Thread.sleep(6000);
 		FileReader reader = new FileReader("C:\\Users\\manusharma\\Downloads\\file_handle_test.dat");
 		BufferedReader breader = new BufferedReader(reader);
 		String line = " ";
 		String signature = "";
-		while((line=breader.readLine())!= null)
-		{
+		while ((line = breader.readLine()) != null) {
 			String[] dd = line.split(":");
-			if(dd[0].trim().equals("Signature"))
-			signature = dd[1].trim();	
+			if (dd[0].trim().equals("Signature"))
+				signature = dd[1].trim();
 		}
 		driver.findElement(locReader.getWebElement("signature")).sendKeys(signature);
 		driver.findElement(locReader.getWebElement("proceed2")).click();

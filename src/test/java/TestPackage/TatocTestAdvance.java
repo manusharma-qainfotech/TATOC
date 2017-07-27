@@ -13,14 +13,17 @@ import org.testng.annotations.Test;
 
 import ActionPackage.TatocAdvance;
 import ActionPackage.TatocMain;
+import ActionPackage.Tatoc_Adv_JS;
 
 public class TatocTestAdvance {
 	WebDriver driver;
-	TatocAdvance main;
+	//TatocAdvance main;
+	Tatoc_Adv_JS main;
 
 	@BeforeClass
 	public void Beforeclass() throws IOException {
-		main = new TatocAdvance();
+		//main = new TatocAdvance();
+	  main = new Tatoc_Adv_JS();
 		driver = main.launchUrl();
 	}
 
@@ -39,28 +42,30 @@ public class TatocTestAdvance {
 		System.out.println(driver.getTitle());
 		assertEquals(driver.getTitle(), "Video Player - Advanced Course - T.A.T.O.C");
 	}
-	@Test(priority=2)
-	public void testOoyalaPlayerD()
-	{
+
+	@Test(priority = 2)
+	public void testOoyalaPlayerD() {
 		main.OoyalaPlayer();
 		System.out.println(driver.getTitle());
-		assertEquals(driver.getTitle(),"Restful - Advanced Course - T.A.T.O.C");
+		assertEquals(driver.getTitle(), "Restful - Advanced Course - T.A.T.O.C");
 	}
-	@Test(priority=3)
-	public void testRestFulApi() throws InterruptedException
-	{  main.RestFulApi();
-	System.out.println(driver.getTitle());
-		assertEquals(driver.getTitle(),"File Handle - Advanced Course - T.A.T.O.C");	
+
+	@Test(priority = 3)
+	public void testRestFulApi() throws InterruptedException {
+		main.RestFulApi();
+		System.out.println(driver.getTitle());
+		assertEquals(driver.getTitle(), "File Handle - Advanced Course - T.A.T.O.C");
 	}
-	@Test(priority =4)
-	public void testFileHandle() throws InterruptedException, IOException
-	{
+
+	@Test(priority = 4)
+	public void testFileHandle() throws InterruptedException, IOException {
 		main.FileHandle();
-  	System.out.println(driver.getTitle());
-		assertEquals(driver.getTitle(),"End - T.A.T.O.C");
+		System.out.println(driver.getTitle());
+		assertEquals(driver.getTitle(), "End - T.A.T.O.C");
 	}
+
 	@AfterClass
 	public void Afterclass() {
-	//	driver.quit();
+		driver.quit();
 	}
 }

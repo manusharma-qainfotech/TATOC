@@ -32,9 +32,10 @@ public class TatocMain {
 		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 		return driver;
 	}
+
 	public void clickOnGreenBox() {
-	driver.findElement(locReader.getWebElement("green_box")).click();
-        Reporter.log("click on green box icon");
+		driver.findElement(locReader.getWebElement("green_box")).click();
+		Reporter.log("click on green box icon");
 	}
 
 	public void Frame_Dungeon() {
@@ -67,7 +68,7 @@ public class TatocMain {
 		action.dragAndDrop(source, target).build().perform();
 		Reporter.log("drag drag_box to drop_box");
 		driver.findElement(locReader.getWebElement("proceed")).click();
-        Reporter.log("click on proceed button");
+		Reporter.log("click on proceed button");
 	}
 
 	public void popupWindow() {
@@ -75,7 +76,7 @@ public class TatocMain {
 		driver.findElement(locReader.getWebElement("launchWindow")).click();
 		Reporter.log("click on launch window");
 		ArrayList<String> list = new ArrayList<String>(driver.getWindowHandles());
-    	driver.switchTo().window(list.get(1));
+		driver.switchTo().window(list.get(1));
 		Reporter.log("driver switch to child window");
 		driver.findElement(locReader.getWebElement("text_Box")).sendKeys("hii all");
 		Reporter.log("send keys to input text_box");
