@@ -74,11 +74,6 @@ public class Tatoc_Adv_JS {
 			 * while (set.next()) { if (set.getString(2).equalsIgnoreCase(symbol)) {
 			 * symbol1 = set.getString(2); break; } } set.close();
 			 */
-			ResultSet resultSetForIdentity = state
-					.executeQuery("select id from identity where symbol='" + Symbol + "'");
-
-			resultSetForIdentity.next();
-			id = resultSetForIdentity.getInt(1);
 			ResultSet set1 = statement.executeQuery("Select * from credentials;");
 			while (set1.next()) {
 				if (symbol.startsWith(set1.getString(2))) {
