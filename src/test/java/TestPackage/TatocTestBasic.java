@@ -50,13 +50,13 @@ public class TatocTestBasic {
 	}
 
 	@Test(priority = 3)
-	public void testPopUpWindow() {
+	public void testPopUpWindow() throws InterruptedException {
 		main.popupWindow();
 		assertEquals(driver.getTitle(), "Cookie Handling - Basic Course - T.A.T.O.C");
 	}
 
 	@Test(priority = 4)
-	public void testCookies() {
+	public void testCookies() throws InterruptedException {
 		main.setCookies();
 		assertEquals(driver.getTitle(), "End - T.A.T.O.C");
 	}

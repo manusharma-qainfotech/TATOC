@@ -82,7 +82,7 @@ public class Tatoc_Basic_JS {
 			Reporter.log("click on proceed button");
 		}
 
-		public void popupWindow() {
+		public void popupWindow() throws InterruptedException {
 			String parentWindow = driver.getWindowHandle();
 			((WebElement)js.executeScript(locReader.getJavaScriptQuery("launchWindow"))).click();
 //			driver.findElement(locReader.getWebElement("launchWindow")).click();
@@ -90,7 +90,7 @@ public class Tatoc_Basic_JS {
 			ArrayList<String> list = new ArrayList<String>(driver.getWindowHandles());
 			driver.switchTo().window(list.get(1));
 			Reporter.log("driver switch to child window");
-			((WebElement)js.executeScript(locReader.getJavaScriptQuery("text_Box"))).click();
+			((WebElement)js.executeScript(locReader.getJavaScriptQuery("text_Box"))).sendKeys("hello all");;
 //			driver.findElement(locReader.getWebElement("text_Box")).sendKeys("hii all");
 			Reporter.log("send keys to input text_box");
 			((WebElement)js.executeScript(locReader.getJavaScriptQuery("submit_button"))).click();
@@ -103,7 +103,7 @@ public class Tatoc_Basic_JS {
 			Reporter.log("click on proceed button");
 		}
 
-		public void setCookies() {
+		public void setCookies() throws InterruptedException {
 			((WebElement)js.executeScript(locReader.getJavaScriptQuery("generate_Token"))).click();
 //			driver.findElement(locReader.getWebElement("generate_Token")).click();
 			Reporter.log("click on generate token");

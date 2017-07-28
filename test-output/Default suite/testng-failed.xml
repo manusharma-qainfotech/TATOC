@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="TestPackage.TatocTestBasic">
+      <class name="TestPackage.TatocTestAdvance">
         <methods>
-          <include name="testPopUpWindow"/>
-          <include name="afterClass"/>
-          <include name="testCookies"/>
-          <include name="beforeClass"/>
+          <include name="testFileHandle"/>
+          <include name="Beforeclass"/>
+          <include name="Afterclass"/>
         </methods>
-      </class> <!-- TestPackage.TatocTestBasic -->
+      </class> <!-- TestPackage.TatocTestAdvance -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
